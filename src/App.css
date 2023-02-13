@@ -1,0 +1,234 @@
+.App {
+  text-align: center;
+}
+
+body {
+  padding: 0%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*navbar*/
+nav {
+  width: 100%;
+  height: 60px;
+  background-color: #002233;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  margin: 1.5rem;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+/*Post Content*/
+
+.imageBox {
+  display: flex;
+}
+
+.headerImg {
+  width: 100%;
+}
+
+.loginReminder {
+  font-size: 30px;
+  text-align: center;
+  padding: 100px;
+}
+
+.homePage {
+  background-image: url("src/assets/woodBackground.jpg");
+}
+
+.post {
+  border-style: solid;
+  border-color: grey;
+  border-radius: 10px;
+  background-color: white;
+  margin: 10px;
+  overflow: hidden;
+  margin: 60px;
+}
+
+.postHeader {
+  display: flex;
+  background-color: #002233;;
+  opacity: 0.8;
+}
+
+.title {
+  color: white;
+  font-size: 14px;
+  padding: 10px;
+
+}
+
+.deletePost {
+  position: absolute;
+  right: 60px;
+}
+
+.deleteButton {
+  border-radius: 50px;
+  border-style: hidden;
+  opacity: 0.9;
+  transition: 0.5s;
+}
+
+.deleteButton:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.postContainer {
+  text-align: justify;
+  font-size: 20px;
+  line-height: 1cm;
+  padding: 10px;
+}
+
+.authorName {
+  background-color: #002233;
+  color: white;
+  padding : 10px 0px 10px;
+  margin: 0;
+  opacity: 0.8;
+}
+
+/*Login Page*/
+
+.loginPage{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginCard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+  width: 400px;
+  height: 500px;
+  text-align: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 40px;
+  padding: 80px 0 0;
+  margin: 50px 0 0;
+  
+}
+
+.loginSign{
+  text-align: center;
+}
+
+.login-with-google-btn {
+  background-color: white;
+  border: solid;
+  border-color: grey;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 1.5rem 2.5rem 1.5rem 2.5rem;
+  transition: 0.5s;
+}
+
+.login-with-google-btn:hover {
+  cursor: pointer;
+  background-color: #1a8cff;
+  color: white;
+}
+
+.google-icon {
+  margin-right: 10px;
+}
+
+
+
+/*Create Post*/
+.createPostPage {
+  background-image: url("src/assets/woodBackground.jpg");
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  font-size: larger;
+}
+
+.cpContainer {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #002233;
+  padding: 50px;
+  margin: 60px;
+  border-radius: 10px;
+  width: 70%;
+  opacity: 0.8;
+}
+
+.titleArea {
+  padding: 5px;
+  width: 100%;
+  border-style: hidden;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+}
+
+.postArea {
+  resize: none;
+  width: 100%;
+  height: 350px;
+  padding: 5px;
+  border-style: hidden;
+  border-radius: 5px;
+  margin: 10px 0px 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.submitPost {
+  background-color: white;
+  border-style: hidden;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: white;
+  color: black;
+  width: 50%;
+  height: 60px;
+  transition-duration: 0.5s;
+}
+
+.submitPost:hover {
+  background-color: grey;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+/*Footer*/
+footer{
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #002233;
+  color: white;
+  align-items: center;
+  height: 45px;
+}
+
+.footerDeclaration {
+  padding-left: 20px;
+}
+
