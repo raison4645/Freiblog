@@ -154,7 +154,7 @@ a {
 
 /*Create Post*/
 .createPostPage {
-  background-image: url("src/assets/woodBackground.jpg");
+  background-image: url("https://github.com/raison4645/MyBlog/blob/main/src/assets/woodBackground.jpg");
   display: flex;
   flex-direction: column;
   color: white;
