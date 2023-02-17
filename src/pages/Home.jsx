@@ -24,7 +24,7 @@ export default function Home({isAuth}) {
   return (
     <div>
       <div className="imageBox">
-       <img className="headerImg" src="https://raw.githubusercontent.com/raison4645/MyBlog/main/src/assets/Home-Kant.webp" />
+       <img className="headerImg" src="./src/assets/Home-Kant.webp" />
       </div>
       {!isAuth && <div className="loginReminder">Login to start using MyBlog</div>}
       <div>{postLists.map((post) => {
