@@ -1,0 +1,94 @@
+.header-img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.login-reminder {
+  background-image: linear-gradient(to right, #b7e5fd, #002233);
+  margin-top: -6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 100px;
+}
+
+@media screen and (max-width: 784px) {
+  .login-reminder {
+    padding: 100px 50px;
+  }
+  .text-bar {
+    display: none;
+  }
+  .first-reminder {
+    font-size: 30px;
+    line-height: 1.0;
+  }
+  .second-reminder {
+    font-size: 12px;
+  }
+}
+.text-bar {
+  background-color: white;
+  height: 200px;
+  width: 20px;
+}
+
+.reminder-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 700px;
+}
+
+.first-reminder {
+  color: rgb(0, 0, 0);;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.second-reminder {
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+
+
+/* Posts */
+.post {
+  width: 70%;
+  margin: 60px auto;
+  border: solid 1px grey;
+  border-radius: 5px;
+}
+.post-header {
+  background-color: #002233;
+  position: relative;
+}
+.title {
+  color: white;
+  padding: 20px 20px;
+}
+
+.delete-post {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.delete-button {
+  padding: 2px;  
+}
+
+.post-container {
+  padding: 20px;
+  line-height: 1.5;
+  font-weight: bold;
+  background-color: #fff;
+}
+
+.author-name {
+  padding: 20px;
+  background-color: grey;
+  color: white;
+}

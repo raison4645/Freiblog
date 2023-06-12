@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { addDoc, collection } from 'firebase/firestore'
 import { auth, db } from "../firebase-config";
 import { useNavigate } from "react-router-dom";
+import '../styles/CreatePost.css'
 
 export default function CreatePost({isAuth}) {
   const[title, setTitle] = useState("");
@@ -9,7 +10,7 @@ export default function CreatePost({isAuth}) {
 
   //submit post to store in the firebase
   const postCollectionRef =  collection(db, "posts");
-
+  
   let navigate = useNavigate();
   
   const createPost = async () => {
@@ -28,16 +29,16 @@ export default function CreatePost({isAuth}) {
   }, [])
 
   return(
-    <div className="createPostPage">
-      <div className="cpContainer">
-        <h1>Create Post</h1>
+    <div className="create-post-page">
+      <div className="cp-container">
+        <h1 className="cp-title">Create Post</h1>
         <div className="inputGp">
-          <input className="titleArea" placeholder="Title..." onChange={(event) => {setTitle(event.target.value)}} />
+          <input className="title-area" placeholder="Title" onChange={(event) => {setTitle(event.target.value)}} />
         </div>
         <div className="inputGp">
-          <textarea className="postArea" placeholder="Post..." onChange={(event) => {setPostText(event.target.value)}}/>
+          <textarea className="post-area" placeholder="Post" onChange={(event) => {setPostText(event.target.value)}}/>
         </div>
-        <button className="submitPost" onClick={createPost}>Submit Post</button>
+        <button className="submit-post" onClick={createPost}>Submit Post</button>
       </div>
     </div>
   )

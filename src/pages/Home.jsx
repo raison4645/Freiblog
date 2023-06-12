@@ -1,6 +1,7 @@
 import { getDocs, collection, deleteDoc, doc } from 'firebase/firestore'
 import { auth, db } from "../firebase-config"
 import React, { useState, useEffect } from "react";
+import "../styles/Home.css"
 
 
 export default function Home({isAuth}) {
@@ -22,30 +23,36 @@ export default function Home({isAuth}) {
   }, []);
 
   return (
-    <div>
-      <div className="imageBox">
-       <img className="headerImg" src="src/assets/Home-Kant.webp" />
+    <div className="home">
+        <img className="header-img" src="../../assets/Home-Kant.webp" />
+      {!isAuth && 
+      <div className="login-reminder">
+        <div className="text-bar"></div>
+        <div className='reminder-text'>
+          <p className="first-reminder">Publish your passions, your way</p>
+          <p className="second-reminder">Create a unique and beautiful blog easily.</p>
+        </div>
       </div>
-      {!isAuth && <div className="loginReminder">Login to start using MyBlog</div>}
+      }
       <div>{postLists.map((post) => {
         return (
         
           <div className="post">
-            <div className="postHeader">
+            <div className="post-header">
               <div className="title">
                 <h1>{post.title}</h1>
               </div>
-                <div className='deletePost'>
+                <div className='delete-post'>
                   {isAuth && post.author.id === auth.currentUser.uid && (
-                  <button className="deleteButton"onClick={() => {deletePost(post.id)}}> 
+                  <button className="delete-button"onClick={() => {deletePost(post.id)}}> 
                     {" "}
                     &#128465; 
                   </button>
                   )}
                 </div>
             </div>
-            <div className="postContainer">{post.postText}</div>
-            <h3 className="authorName">@{post.author.name}</h3>
+            <div className="post-container">{post.postText}</div>
+            <h3 className="author-name">@{post.author.name}</h3>
           </div>
         )
       })}</div>
