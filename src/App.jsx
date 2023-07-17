@@ -29,7 +29,7 @@ export default function App() {
     <Router>
       <nav id="navbar">
         <div className="nav-items">
-          <Link to="/" className="logo">FREIBLOG</Link>
+          <Link to="/" className="logo">Das Freiblog</Link>
           <div className="nav-right-wrapper">
             {
               !isAuth ? (<Link to="/login" className="loginNav">LOGIN</Link>) :
